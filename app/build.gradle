@@ -18,12 +18,21 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            shrinkResources false
         }
     }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
+    }
+
+    // 加速构建
+    buildFeatures {
+        buildConfig = false
+        resValues = false
+        aidl = false
+        renderScript = false
     }
 }
 
