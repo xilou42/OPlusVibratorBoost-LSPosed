@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">欧加振动增强</string>
+    <string name="module_description">增强 OPPO 手机振动强度（适配联发科 + 艾为马达）</string>
+</resources>
