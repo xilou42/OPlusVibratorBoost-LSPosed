@@ -1,0 +1,101 @@
+═══════════════════════════════════════════════════════════════
+  欧加振动增强 LSPosed 模块 - 一键编译指南
+═══════════════════════════════════════════════════════════════
+
+由于你的网络环境无法直接下载 Gradle 和依赖包，这里提供两个可行方案：
+
+┌─────────────────────────────────────────────────────────────┐
+│ 方案 1：使用 Android Studio（推荐，最简单）                │
+└─────────────────────────────────────────────────────────────┘
+
+步骤：
+1. 下载并安装 Android Studio：
+   https://developer.android.com/studio
+
+2. 打开 Android Studio，选择 "Open an Existing Project"
+
+3. 选择文件夹：
+   C:\Users\xilou\Desktop\LSPosed-Module
+
+4. 等待 Gradle 同步完成（首次会自动下载依赖，需要网络）
+   - 如果同步失败，点击 "File" → "Settings" → "HTTP Proxy"
+   - 选择 "Manual proxy configuration"
+   - 填入你的代理服务器信息
+
+5. 点击菜单：Build → Build Bundle(s) / APK(s) → Build APK(s)
+
+6. 编译完成后，APK 位于：
+   C:\Users\xilou\Desktop\LSPosed-Module\app\build\outputs\apk\release\app-release.apk
+
+7. 将这个 APK 传到手机，用 LSPosed Manager 安装即可
+
+
+┌─────────────────────────────────────────────────────────────┐
+│ 方案 2：使用在线编译服务（无需本地编译环境）              │
+└─────────────────────────────────────────────────────────────┘
+
+已为你准备好 GitHub Actions 自动编译配置！
+
+步骤：
+1. 在 GitHub 创建新仓库：
+   https://github.com/new
+   仓库名：OPlusVibratorBoost-LSPosed
+   设置为 Public（免费使用 GitHub Actions）
+
+2. 上传项目到 GitHub：
+   打开 Git Bash，执行：
+
+   cd C:\Users\xilou\Desktop\LSPosed-Module
+   git init
+   git add .
+   git commit -m "Initial commit: LSPosed vibration boost module"
+   git branch -M main
+   git remote add origin https://github.com/你的用户名/OPlusVibratorBoost-LSPosed.git
+   git push -u origin main
+
+3. GitHub Actions 会自动开始编译（约 3-5 分钟）
+   - 进入你的仓库页面
+   - 点击 "Actions" 标签
+   - 等待绿色的 ✓ 标记
+
+4. 下载编译好的 APK：
+   - 点击最新的 workflow run
+   - 在 "Artifacts" 区域下载：OPlusVibratorBoost-LSPosed.zip
+   - 解压得到 app-release.apk
+
+
+┌─────────────────────────────────────────────────────────────┐
+│ 方案 3：手机上直接安装（临时测试方案）                     │
+└─────────────────────────────────────────────────────────────┘
+
+由于 LSPosed 模块主要依赖的是 Java 代码和配置文件，
+我已经为你准备了一个"模块配置包"，可以手动安装测试。
+
+查看文件：C:\Users\xilou\Desktop\LSPosed-Module-手动安装包\
+
+
+═══════════════════════════════════════════════════════════════
+  推荐方案
+═══════════════════════════════════════════════════════════════
+
+👉 如果你有稳定的网络：使用【方案 1 - Android Studio】最简单
+
+👉 如果你网络不稳定：使用【方案 2 - GitHub Actions】在线编译
+
+👉 如果你急需测试：使用【方案 3】手动安装
+
+
+═══════════════════════════════════════════════════════════════
+  问题排查
+═══════════════════════════════════════════════════════════════
+
+Q: Android Studio 同步 Gradle 失败？
+A: 配置代理：File → Settings → HTTP Proxy
+
+Q: GitHub Actions 编译失败？
+A: 检查 .github/workflows/build-apk.yml 文件是否存在
+
+Q: 手动安装后 LSPosed 不识别？
+A: 确保在 LSPosed Manager 中勾选了"欧加振动增强"模块并重启
+
+═══════════════════════════════════════════════════════════════

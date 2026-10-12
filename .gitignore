@@ -1,0 +1,16 @@
+# Gradle files
+.gradle/
+gradle-*.zip
+*.bak
+
+# Build outputs
+build/
+*.log
+
+# IDE
+.idea/
+*.iml
+
+# Temporary files
+*.tmp
+*.bat
