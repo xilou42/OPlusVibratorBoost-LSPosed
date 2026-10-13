@@ -1,34 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oplus.vibrator.booster">
 
     <application
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@android:style/Theme.DeviceDefault">
-
-        <!-- Xposed Module Metadata -->
+        android:label="OPPO马达增强"
+        android:allowBackup="true">
+        
+        <!-- Xposed 模块声明 -->
         <meta-data
             android:name="xposedmodule"
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="增强 OPPO 手机振动强度（适配联发科 + 艾为马达）" />
+            android:value="OPPO Find X9 Pro 马达振动增强模块" />
         <meta-data
             android:name="xposedminversion"
-            android:value="93" />
-        <meta-data
-            android:name="xposedscope"
-            android:resource="@array/xposed_scope" />
-
-        <!-- Empty Activity for LSPosed UI -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:value="82" />
     </application>
 
 </manifest>
